@@ -51,7 +51,7 @@ export default function MarkmapHooks({ markdown }: MarkmapHooksProps) {
 
     setIsLoading(true);
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8787";
+      const apiUrl = import.meta.env.VITE_API_URL || "https://mindmap-be-v2.xlr8090.workers.dev";
       const response = await fetch(`${apiUrl}/generate-mindmap`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
